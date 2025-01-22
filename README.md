@@ -1,5 +1,5 @@
 <p align="center">
-    <font face="Futura" size=6 color="#1b1b1b">⏱︎&nbsp;spec-bench-vllm&nbsp;⏱︎</font>
+    <h1 align="center" style="margin-bottom:0px;">⏱︎&nbsp;spec-bench-vllm&nbsp;⏱︎</h1>
     <h6 align="center">Some tests on speculative decoding in vllm</h6>
 </p>
 
@@ -60,7 +60,7 @@
 因为在实验中，发现 vllm 中即使设置了贪婪解码相关参数，也无法保证每次在相同数据集上生成的 tokens 数严格一致，实际上即使单独运行大模型也会导致每次运行生成的 tokens 数不一样（见 [issue#5404](https://github.com/vllm-project/vllm/issues/5404) 和 [issue#6735](https://github.com/vllm-project/vllm/issues/6735)） ，所以不使用`duration（second）`而是使用`throughput（tokens/second）`来计算加速比
 
 <div align="center">
-<img src="readme_imgs/[Round-1]max_values.png" width="90%">
+<img src="readme_imgs/1_max_values.png" width="90%">
 </div>
 
 #### 表2 - Throughput Speedup Heatmap
@@ -68,7 +68,7 @@
 图片为概览，关于每个方法在每个子任务下的具体加速比图像，可以在 auto_test_results/online 的各个子文件夹里查看
 
 <div align="center">
-<img src="readme_imgs/[Round-1]heatmap_throughput.png" width="90%">
+<img src="readme_imgs/1_heatmap_throughput.png" width="90%">
 </div>
 
 ### 🧷 复现测试结果
@@ -151,7 +151,7 @@
 关于接受率：target 模型增大，草稿接受率会稍稍降低，但总体而言 system efficiency 都很高（8k上下文约0.5～0.6)
 
 <div align="center">
-<img src="readme_imgs/[Round-2]heatmap_throughput.png" width="90%">
+<img src="readme_imgs/2_heatmap_throughput.png" width="90%">
 </div>
 
 
