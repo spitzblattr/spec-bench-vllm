@@ -36,5 +36,5 @@ def create_directory_structure(base_path):
 
 if __name__ == "__main__":
     # 在该根目录下生成存放测试结果的子文件夹
-    create_directory_structure("/home/spitzblattr/stress_test")
+    create_directory_structure("/PATH/TO/YOUR/[Round-1]stress_test_all_methods")
     print("创建测试结果文件目录完成")
